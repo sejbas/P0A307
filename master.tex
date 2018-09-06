@@ -25,22 +25,16 @@
 \input{sections/frontpage.tex}
 \input{sections/colophon.tex}
 \input{sections/titlepages.tex}
-\cleardoublepage
 \pdfbookmark[0]{Contents}{label:contents}
 \pagestyle{fancy} %enable headers and footers again
 \tableofcontents
 \listoftodos
 \input{sections/preface.tex}
-\cleardoublepage
 %mainmatter
 \pagenumbering{arabic} %use arabic page numbering in the mainmatter
 \input{sections/introduction.tex}
-\input{sections/rapport.tex}
-\input{sections/ch2name.tex}
-\input{sections/conclusion.tex}
-\printbibliography[title=Kildeliste, heading=bibintoc]
-%\printbibliography[heading=bibintoc]
+\input{sections/Emnevalg.tex}
+\input{sections/Problemanalyse.tex}
+\printbibliography[heading=bibintoc]
 \label{bib:mybiblio}
-\appendix
-\input{sections/appAname.tex}
 \end{document}
