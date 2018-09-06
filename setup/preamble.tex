@@ -33,7 +33,9 @@
 \usepackage[utf8]{inputenc}
 % Make latex understand and use the typographic
 % rules of the language used in the document.
-\usepackage[danish,english]{babel}
+\usepackage[danish]{babel}
+    \addto{\captionsdansk}{\renewcommand{\bibname}{Kildeliste}}
+    \addto{\captionsenglish}{\renewcommand{\bibname}{Kildeliste}}
 % Use the palatino font
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palatino needs more leading (space between lines)
@@ -126,7 +128,7 @@
   bibencoding=utf8
   ]{biblatex}
 \addbibresource{bib/mybib}
-
+\renewcommand{\bibname}{Kildeliste}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Misc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
