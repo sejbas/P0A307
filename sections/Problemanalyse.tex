@@ -1,7 +1,12 @@
 \section{Valg af problem}
-Herunder vil vi bedskrive hvilke problemer vi har valgt og hvorfor. 
+Herunder vil det blive beskrevet hvilket problem der er valgt og hvorfor nettop dette er valgt.\\
+Vi har analyseret de elementer fra vores brainstorm som vi mente havde mest i sig, men samtidig også var de største og mest interessante problemstillinger ud fra de problemer der blev fundet i brainstormen.\\
+Efter vores brainstorm vurderes udvalgte problemstillinger, for at se hvilken af disse vil være relevant for videre arbejde.
+
+
+
     \subsection{Brainstorm}
-    For at finde det problem vi vil arbejde med med henhold til Internet of Things, har vi lavet en brainstorm, der er opskrevet herunder.
+    For at finde det problem rapporten vil arbejde med med henhold til Internet of Things, har er der lavet en brainstorm, der er opskrevet herunder.
         
         \begin{enumerate}
             \item Masser af hullede produkter på netværket.
@@ -18,52 +23,65 @@ Herunder vil vi bedskrive hvilke problemer vi har valgt og hvorfor.
             \item Jobovertagelse. 
             \item Flere faktorer kan give fejl på produktet.
         \end{enumerate}
+\newpage
+
+
+    \subsection{Analyse af problemstillinger}
     
-    \subsection{Huller i netværket}
-    Med firmaer som prioriterer indtjeningen over sikkerheden for deres klienter møder vi et marked som er fyldt med enheder som ikke har brugerens sikkerhed i mente og derfor udgør et sikkerhedsbrud for hele dit netværk. Dette åbner op for den mulighed at hackere kan tvinge sig adgang til dit netværk og bruge informationerne til ondsindede formål og på dette tidspunkt kan de IoT produkter som var skabt til at gøre din hverdag nemmere bruges imod dig. Dit smart TV kan tage billeder af dig, 
-    
-    \subsection{Remote control}
-    IoT muliggøre at mange enheder som før skulle betjenes manuelt kan nu styres via fjernadgang. For forbrugeren kan dette være en stor fordel da flere opgaver kan udføres uden man fysiks skal bevæge sig. Sikkerhedsmæssigt kan det skabe problematikker da hvor der før kun var fysisk adgang til enheden er det nu muligt at tilgå enheden et vilkårligt sted fra netværket eller internettet. Ondsindetpersoner kan derfor overtage produktet og misbruge informationer eller udføre fysisk skade. Remote control kan være et problem men kun hvis der er huller i netværk sikkerheden og derfor vil det være bedre at fokusere på netværk sikkerheden.
-    \subsection{Gammel software}
-    Et af de store problemer vi så ved sikkerheden i IoT enheder var den relativt korte end of life tid på meget af softwaren og firmwaren involveret. Ved end of life vil en producent typisk stoppe med at lave nye opdateringer til deres produkt, og dette inkluderer sikkerhedsopdateringer. I følge eksperter er opdateret software er en af de absolut vigtigste ting %TODO: andet ord
-    når det kommer til at være sikker online. \autocite{soups2015} Hvis software ikke bliver regelmæssigt opdateret vil den være langt mere sårbar, da den ikke vil være resistent mod de nyeste udviklinger inden for hackingangreb.
+        \subsubsection{Huller i netværket}
+        Med firmaer som prioriterer indtjeningen over sikkerheden for deres klienter møder vi et marked som er fyldt med enheder som ikke har brugerens sikkerhed i mente og derfor udgør et sikkerhedsbrud for hele det netværk enheden tilkobles.\\
+        Dette åbner op for den mulighed at hackere kan tvinge sig adgang til dit netværk og bruge informationerne til ondsindede formål på dette tidspunkt kan de IoT produkter som var skabt til at gøre din hverdag nemmere bruges imod dig. Nogle smart TV kan tage billeder af dig, GPSen i din bil kan spore dig og dine smartdoors kan lukke dig ud af dit eget hus.\\
+        
+        
+        Som sagt ligger problemet med IoT enheder ofte i at der ikke bliver gjort meget ud af sikkerhedsaspekterne. Der bliver nok nødt til at blive implementeret nogle sikkerhedsforanstaltninger som bliver sat som krav for alle firmaer som står for produktionen af IoT enheder. Dette var også også noget der kunne ses med Dahuas skandale hvor deres IoT blev brugt i et DDOS angreb mod Dyn som er en DNS provider til flere store hjemmesider som Twitter, Spotify og Reddit. Her blev Dahuas tvunget til at lukke det sikkerhedshul som mange siger var pinligt nemme.\\
+            For at stoppe hackere fra at kunne sætte angreb igang som det med Dahuas IoT enheder skal der implementeres nogle sikkerheds forenstaltninger. Her  kan der tales om noget som at sikre sig at de samme brugernavne og koder ikke bliver brugt til de samme enheder.Koder og brugernavne bliver nødt til at være unikke og stærke. Disse bliver herefter klistres de på den enkelte IoT enhed, så det kun er ejeren af IoT enheden der har adgang til dem. Det er også vigtigt at sørge for at den information som bliver opfanget og sendt fra IoT enhederne bliver krypteret, dette sikrer at hvis nogen får adgang til dine IoT enheder vil de ikke få nogen brugbar information om hvor de er, hvem der ejer enheden eller hvor lang tid enheden har være aktiv. Hvis IoT enheden har en web interface, er skal man også sikre mod simple hacker teknikker om SQL-indsprøjtninger og cross-site scripting. til sidst er det også utrolig vigtigt at der løbende kommer opdateringer til den software som bruges i IoT enhederne. det er ligesom man ser på computerne hvor de patcher de sikkerheds problemer der nu engang vil komme. Fordi der bliver hele tiden fundet nye måder hvorpå ondsindede typer kan få adgang til dit netværk.\autocite{Ref10}\\ 
+        
+        
+        \subsubsection{Remote control}
+        IoT muliggøre at mange enheder som før skulle betjenes manuelt nu kan styres via fjernadgang. For forbrugeren kan dette være en stor fordel da flere opgaver kan udføres uden man fysiks skal bevæge sig. Sikkerhedsmæssigt kan det skabe problematikker, eftersom hvor der før kun var fysisk adgang til enheden er det nu muligt at tilgå enheden fra et vilkårligt sted fra netværket eller internettet.\\ Ondsindetpersoner kan derfor overtage produktet og misbruge informationer eller udføre fysisk skade. Remote control kan være et problem men kun hvis der er huller i netværk sikkerheden og derfor vil det være bedre at fokusere på netværksikkerheden i stedet for denne problemstilling.\autocite{}\\
+        
+        \subsubsection{Gammel software}
+        Et af de store problemer vi så ved sikkerheden i IoT enheder var den relativt korte end of life tid på meget af softwaren og firmwaren involveret. Ved end of life vil en producent typisk stoppe med at lave nye opdateringer til deres produkt, og dette inkluderer sikkerhedsopdateringer. I følge sikkerhedseksperter er opdateret software er en af de absolut vigtigste elementer i et sikkert produkt. \autocite{soups2015} Hvis software ikke bliver regelmæssigt opdateret vil den være langt mere sårbar, da den ikke vil være resistent mod de nyeste udviklinger inden for hackingangreb.
+        
     \subsection{Problemanalyse}
     Hvad er jeres initierende undren?\\
-    Da IoT bliver sådan en stor del af vores hverdag vil vi gerne kende de problemer der kan opstå.\\
+    Da IoT bliver sådan en stor del af vores hverdag vil vi gerne kende de problemer der kan opstå. \\
+        
     
-    
-    
-    \subsection{HV spørgsmål}
-    Hvorfor opstår dette problem?\\
-    Fordi der bliver bygget IoT enheder som ikke har haft fokus på sikkerhed. Det sker da der er fordel i at komme først på markedet\\
-    Hvorfor er det et relevant problem? \\
-    Problemet bliver kun større. Det er et stadigt stigende antal devices.
-    
-    Hvad sker der hvis problemet ikke løses?\\
-    Hvad er symptomerne? \\
-    Hvad er effekten? \\
-    
-    
-    Hvad?\\
-    Hvilke begreber skal jeg være bekendt med for at kunne forstå dette problem?\\
-    Hvordan begrebsliggøre andre dette problem?\\
-    
-    Hvem?\\
-    Hvem er skyld i problemet?\\
-    Hvem siger dette er et problem?\\
-    Hvem påvirkes af dette prblem?\\
-    Hvem har indflydelse på problemet?\\
-    
-    Hvor?\\
-    Hvor opstår dette problem?\\
-    Hvor har dette problem en effekt?\\
-    
-    Hvornår?\\
-    Hvornår opstår dette problem?\\
-    Hvornår begyndte dette problem først at opstå?\\
+        
+        \subsubsection{HV spørgsmål}
+        Hvorfor opstår dette problem?\\
+        I det at flere og flere enheder bliver introduceret til en persons lokale netværk i form af IoT-enheder, vil dette også inkludere flere indgangspunkter eller ”huller”, hvor en personlig invadering kunne finde sted. Specielt produkter der er designet til enkelt praktiske formål, er potentielle svaghedspunkter i et lokalt netværk, da deres sikkerheds standarter generelt er underlegen produkter med mere generelle formål. Der er en udbredt konkurrence omkring disse produkter, derfor er der en stor interesse i at udgive dem hurtigst og billigst muligt, hvilket gør at sikkerheden af produktet ikke sættets i fokus.\\
+
+        Hvorfor er det et relevant problem? \\
+        IoT-enheder er i stigende grad mere og mere populære. I fremtiden forventes der en voldsom stigning i efterspørgslen og produktionen af lignende produkter. Derfor er det et meget relevant problem, da det efterhånden vil være en del af den normale borgers hverdag. Der er allerede ifl. Staistica 23,14 milliarder enheder i brug, og antallet vil cirka stige 3 gange inden år 2025.\\
+        
+        Hvad sker der hvis problemet ikke løses?\\
+        Da det netop er en voksende trend, vil det åbne flere og flere mennesker op for cyber-angreb. Dette kan have katastrofale konsekvenser i form af tyveri af personlig data, krænkelse af personlig data, overvågning, fysisk skade osv.\\ 
+        
+        Hvem?\\
+        Hvem er skyld i problemet?\\
+        Dette er bl.a. en markedsfejl. Der er et manglende incitament til at opgradere sikkerhedsstandarten i produkterne, da først til mølle princippet, spiller så afgørende en rolle i produktets succes. Desuden er kravene til sikkerhedsstandarterne specielt i de produkter med ensrettede funktioner ikke optimale. Specielt kinesiske produkter har lave standarter, da lovgivningen i det pågældende land er mere slap, og deres produkter har et stort fokus på discount frem for kvalitet.\\
+        
+        
+        Hvem siger dette er et problem?\\
+        Eksperter i IT verden over advare imod de potentielle farer der opstår ved IoT enheder.\autocite{Rainie2017}\\
+        Hvem påvirkes af dette problem?\\
+        Den moderne borger er under risiko for at blive ramt af cyber-angreb igennem simple enheder. IoT enheder er så udbredt, og vil udbrede sig så meget i fremtiden, at det er stor del af befolkningen, der bærer risikoen.\\
+        
+        Hvor?\\
+        Hvor opstår dette problem?\\
+        Dette er et globalt problem, det påvirker den gennemsnitlige, moderne population, dog hovedsageligt i I-lande, da IoT-enheder er generelt lokaliseret her.\\
+        
+        Hvornår?\\
+        Hvornår opstår dette problem?\\
+        Der er en række forskellige metoder, man kan benytte for at forbedre gøre problemet. Regeringen kunne indføre strengere sikkerhedstandarter eks. I form af krypteringsstander til produkterne. Der kunne indføres en ”stop-klods” i systemet, der eks. ville kunne stoppe angriberne i at få adgang til hele dit lokale system ved blot at inficere en enkel IoT-enhed.\\
+        
     
     \subsection{Problemtyper}
     Anomali\\
+    Et sikkerhedhul er en anomali\\
     Paradoks\\
     Beslutningsproblemer\\
     Normalier\\
+    At der er huller som er accepteret er normalier\\
