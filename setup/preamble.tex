@@ -38,6 +38,8 @@
 % Use the palatino font
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palatino needs more leading (space between lines)
+%more spacing options
+\usepackage{setspace}
 % Choose the font encoding
 \usepackage[T1]{fontenc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,6 +59,8 @@
   font=footnotesize,% set font size to footnotesize
   labelfont=bf % bold label (e.g., Figure 3.2) font
 }
+%float pakke til at styre placering af figur og tabel
+\usepackage{float}
 % Make the standard latex tables look so much better
 \usepackage{array,booktabs}
 % Enable the use of frames around, e.g., theorems
@@ -119,8 +123,10 @@
   bibencoding=utf8,
   style=apa,
   %citestyle=apa,
-  language=danish
+  language=danish,
   ]{biblatex}
+\usepackage{url}
+\usepackage{breakurl}
 \bibliography{bib/mybib}
 \DeclareLanguageMapping{danish}{danish-apa}
 \DefineBibliographyStrings{danish}{
@@ -166,3 +172,7 @@
 	urlcolor=black,%
 	pdfstartview=FitH%
 }
+% Use glossaries (intentionally loaded after hyperref)
+\usepackage{glossaries}
+\input{bib/glossary.tex}
+\glstoctrue
