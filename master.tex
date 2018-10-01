@@ -23,7 +23,7 @@
     \pagestyle{empty} %disable headers and footers
     \pagenumbering{arabic} %use roman page numbering in the frontmatter
     \input{sections/frontpage.tex}
-    \input{sections/colophon.tex}
+    %\input{sections/colophon.tex}
     \input{sections/titlepages.tex}
     \pdfbookmark[0]{Contents}{label:contents}
     \pagestyle{fancy} %enable headers and footers again
@@ -38,10 +38,8 @@
         \input{sections/Problemanalyse.tex}
         \input{sections/Eksempel.tex}
         \input{sections/Problemformulering.tex}
-        %\input{sections/Problemstilling.tex}
         \printbibliography[heading=bibintoc]
         \label{bib:mybiblio}
         \printglossaries
-        \listoftodos
     \end{spacing}
 \end{document}
